@@ -12,11 +12,3 @@ $koneksi = new mysqli($server, $username, $password, $database);
 if ($koneksi->connect_error) {
     die("Koneksi ke database gagal: " . $koneksi->connect_error);
 }
-
-echo "Koneksi sukses!";
-
-// Sekarang Anda dapat menjalankan query dan berinteraksi dengan database
-// Misalnya, Anda dapat menjalankan SELECT atau INSERT query di sini.
-
-// Tutup koneksi ketika selesai
-$koneksi->close();

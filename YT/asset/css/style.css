@@ -11,7 +11,10 @@ body{
 }
 .login-form{
     width: 380px;
-    height: 450px;
+    height: 260px;
     padding: 20px;
     border-radius: 5px;
+}
+.regsitrasi{
+    text-align: right;
 }
