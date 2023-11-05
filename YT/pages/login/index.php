@@ -1,4 +1,7 @@
-<?php include('../patrial/patrial-top.php') ?>
+<?php
+include('../patrial/patrial-top.php');
+session_start();
+?>
 
 <div class="global-container">
   <div class="card login-form">
@@ -6,6 +9,12 @@
       <h1 class="card-title text-center">LOGIN</h1>
     </div>
     <div class="card-text">
+      <?php
+      if (isset($_SESSION['daftar_berhasil'])) {
+        echo '<script>window.alert("' . $_SESSION['daftar_berhasil'] . '")</script>';
+      }
+
+      ?>
       <form action="login-proses.php" method="post">
         <div class="mb-3">
           <label for="id" class="form-label" name="nik">NIK</label>

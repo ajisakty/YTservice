@@ -19,8 +19,7 @@ if (empty($nik) || empty($nama) || empty($alamat)) {
         $query = "INSERT INTO user(nik,nama,alamat) VALUE('$nik','$nama','$alamat')";
 
         if (mysqli_query($koneksi, $query)) {
-            echo '<script>window.alert("Daftar Berhasil")</script>';
-            header("Location:../login");
+            echo "<script>window.alert('Daftar Berhasil'); window.location.href='../login'</script>";
         } else {
             echo '<script>window.alert("Pendaftaran Gagal")</script>';
         }

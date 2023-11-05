@@ -4,7 +4,7 @@ include "../../config/conection.php"
 ?>
 
 <div class="global-container">
-    <div class="card login-form">
+    <div class="card register-form">
         <span class="border border-dark">
             <div class="card-body border">
                 <h1 class="card-title text-center">REGISTER</h1>

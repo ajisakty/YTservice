@@ -1,34 +1,32 @@
-<?php include '../../asset/css/header.php' ?>
+<?php
+include '../../asset/css/header.php';
+include 'data-dashboard.php';
+?>
 <div class="container">
     <div class="row">
         <div class="form">
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
+                        <th scope="col">No</th>
+                        <th scope="col">Nomer Polisi</th>
+                        <th scope="col">Type Kendaraan</th>
+                        <th scope="col">Merek Kendaraan</th>
+                        <th scope="col">Tahun Kendaraan</th>
+                        <th scope="col">Warna</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td colspan="2">Larry the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
+                    <?php foreach ($list_kendaraan as $index => $kendaraan) { ?>
+                        <tr>
+                            <td><?php echo $index + 1; ?></td>
+                            <td><?php echo $kendaraan['nopol']; ?></td>
+                            <td></td>
+                            <td><?php echo $kendaraan['merk_kendaraan']; ?></td>
+                            <td><?php echo $kendaraan['thn_kendaraan']; ?></td>
+                            <td><?php echo $kendaraan['warna']; ?></td>
+                        </tr>
+                    <?php } ?>
                 </tbody>
             </table>
             <input type="submit" value="Tambah">
