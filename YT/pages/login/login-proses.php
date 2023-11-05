@@ -13,7 +13,7 @@ if ($hasil) {
 
     if ($data_user != null) {
         $_SESSION['id'] = $data_user['id_user'];
-        header('Location: ../dashboard');
+        header('Location: ../user-vehicle');
         exit;
         // echo "<script>window.alert('Berhasil Login')</script>";
     } else {
