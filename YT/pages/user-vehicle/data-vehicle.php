@@ -2,8 +2,11 @@
 session_start();
 include '../../config/conection.php';
 $id = $_SESSION['id'];
+
 $query = "SELECT * FROM mobil WHERE id_user = '$id'";
 $result = mysqli_query($koneksi, $query);
+
+
 
 $list_kendaraan = array();
 

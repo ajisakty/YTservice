@@ -13,7 +13,7 @@ include 'data-vehicle.php';
                         <th scope="col">No</th>
                         <th scope="col">Nomer Polisi</th>
                         <th scope="col">Merek Kendaraan</th>
-                        <th scope="col">Type Kendaraan</th>
+                        <th scope="col">Tipe Kendaraan</th>
                         <th scope="col">Tahun Kendaraan</th>
                         <th scope="col">Warna</th>
                         <th scope="col">Action</th>
@@ -25,14 +25,24 @@ include 'data-vehicle.php';
                             <td><?php echo $index + 1; ?></td>
                             <td><?php echo $kendaraan['nopol']; ?></td>
                             <td><?php echo $kendaraan['merk_kendaraan']; ?></td>
-                            <td></td>
+                            <td><?php echo $kendaraan['tipe_kendaraan']; ?></td>
                             <td><?php echo $kendaraan['thn_kendaraan']; ?></td>
                             <td><?php echo $kendaraan['warna']; ?></td>
+                            <td>
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-secondary btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Menu
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="delete-vehicle.php?id_kendaraan=<?php echo $kendaraan['id_kendaraan']; ?>">Delete</a></li>
+                                        <li><a class="dropdown-item" href="#">Edit</a></li>
+                                </div>
+                            </td>
                         </tr>
                     <?php } ?>
                 </tbody>
             </table>
-            <a href="#" class="btn btn-primary">Tambah</a>
+            <a href="../register-vehicle" class="btn btn-primary">Tambah</a>
         </div>
     </div>
 </div>
