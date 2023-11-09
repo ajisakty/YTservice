@@ -10,6 +10,7 @@ include 'data-vehicle.php';
             <table class="table">
                 <thead>
                     <tr>
+                        <th>Pilih</th>
                         <th scope="col">No</th>
                         <th scope="col">Nomer Polisi</th>
                         <th scope="col">Merek Kendaraan</th>
@@ -20,29 +21,33 @@ include 'data-vehicle.php';
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach ($list_kendaraan as $index => $kendaraan) { ?>
-                        <tr>
-                            <td><?php echo $index + 1; ?></td>
-                            <td><?php echo $kendaraan['nopol']; ?></td>
-                            <td><?php echo $kendaraan['merk_kendaraan']; ?></td>
-                            <td><?php echo $kendaraan['tipe_kendaraan']; ?></td>
-                            <td><?php echo $kendaraan['thn_kendaraan']; ?></td>
-                            <td><?php echo $kendaraan['warna']; ?></td>
-                            <td>
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-secondary btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Menu
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="delete-vehicle.php?id_kendaraan=<?php echo $kendaraan['id_kendaraan']; ?>">Delete</a></li>
-                                        <li><a class="dropdown-item" href="#">Edit</a></li>
-                                </div>
-                            </td>
-                        </tr>
-                    <?php } ?>
+                    <form action="">
+                        <?php foreach ($list_kendaraan as $index => $kendaraan) { ?>
+                            <tr>
+                                <td><input type="radio" class="form-check-input" name="service"></td>
+                                <td><?php echo $index + 1; ?></td>
+                                <td><?php echo $kendaraan['nopol']; ?></td>
+                                <td><?php echo $kendaraan['merk_kendaraan']; ?></td>
+                                <td><?php echo $kendaraan['tipe_kendaraan']; ?></td>
+                                <td><?php echo $kendaraan['thn_kendaraan']; ?></td>
+                                <td><?php echo $kendaraan['warna']; ?></td>
+                                <td>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-secondary btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Menu
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="delete-vehicle.php?id_kendaraan=<?php echo $kendaraan['id_kendaraan']; ?>">Delete</a></li>
+                                            <li><a class="dropdown-item" href="edit.php?id_kendaraan=<?php echo $kendaraan['id_kendaraan'] ?>">Edit</a></li>
+                                    </div>
+                                </td>
+                            </tr>
+                        <?php } ?>
+                    </form>
                 </tbody>
             </table>
-            <a href="../register-vehicle" class="btn btn-primary">Tambah</a>
+            <a href="../register-vehicle" class="btn btn-primary me-2">Tambah</a>
+            <a href="../register-vehicle" class="btn btn-primary">Pilih</a>
         </div>
     </div>
 </div>

@@ -1,4 +1,6 @@
-<?php include '../patrial/patrial-top.php' ?>
+<?php
+include '../patrial/patrial-top.php';
+?>
 
 <div class="container mt-3" style="width: 450px;">
     <div class="card">
@@ -38,6 +40,7 @@
                     </tr>
                 </table>
                 <button type="submit" class="btn btn-primary">Tambah</button>
+            </form>
         </div>
     </div>
 
