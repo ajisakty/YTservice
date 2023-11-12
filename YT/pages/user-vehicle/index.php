@@ -21,10 +21,10 @@ include 'data-vehicle.php';
                     </tr>
                 </thead>
                 <tbody>
-                    <form action="">
+                    <form action="../service">
                         <?php foreach ($list_kendaraan as $index => $kendaraan) { ?>
                             <tr>
-                                <td><input type="radio" class="form-check-input" name="service"></td>
+                                <td><input type="radio" class="form-check-input" name="service" value=<?php echo $kendaraan['id_kendaraan'] ?>></td>
                                 <td><?php echo $index + 1; ?></td>
                                 <td><?php echo $kendaraan['nopol']; ?></td>
                                 <td><?php echo $kendaraan['merk_kendaraan']; ?></td>
@@ -43,11 +43,16 @@ include 'data-vehicle.php';
                                 </td>
                             </tr>
                         <?php } ?>
-                    </form>
+
                 </tbody>
+                <tfoot>
+                    <tr>
+                        <td><input type="submit" class="btn btn-primary"></button></td>
+                        <td><a href="../service/" class="btn btn-primary">Pilih</a></td>
+                    </tr>
+                </tfoot>
+                </form>
             </table>
-            <a href="../register-vehicle" class="btn btn-primary me-2">Tambah</a>
-            <a href="../register-vehicle" class="btn btn-primary">Pilih</a>
         </div>
     </div>
 </div>
