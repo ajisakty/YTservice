@@ -15,7 +15,7 @@ if (isset($_POST["submit"])) {
     ];
 
     if (inputService($data, $id_mobil)) {
-        echo "Berhasil!";
+        echo "<script>window.alert('Berhasil');window.location.href='../user-vehicle';</script>";
     } else {
         echo "Gagal!";
         echo $data['cabang'] . "<br>";

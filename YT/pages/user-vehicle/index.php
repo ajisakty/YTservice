@@ -3,7 +3,7 @@ include '../patrial/patrial-top.php';
 include 'data-vehicle.php';
 ?>
 
-<div class="container mt-3" style="width: 750px;">
+<div class="container mt-3" style="width: 780px;">
     <div class="card">
         <h4 class="mt-3" style="text-align: center;">Daftar Kendaraan</h4>
         <div class="card-body">
@@ -39,16 +39,16 @@ include 'data-vehicle.php';
                                         <ul class="dropdown-menu">
                                             <li><a class="dropdown-item" href="delete-vehicle.php?id_kendaraan=<?php echo $kendaraan['id_kendaraan']; ?>">Delete</a></li>
                                             <li><a class="dropdown-item" href="edit.php?id_kendaraan=<?php echo $kendaraan['id_kendaraan'] ?>">Edit</a></li>
+                                        </ul>
                                     </div>
                                 </td>
                             </tr>
                         <?php } ?>
-
                 </tbody>
                 <tfoot>
                     <tr>
                         <td><input type="submit" class="btn btn-primary"></button></td>
-                        <td><a href="../service/" class="btn btn-primary">Pilih</a></td>
+                        <td><a href="../register-vehicle/" class="btn btn-primary">Tambah</a></td>
                     </tr>
                 </tfoot>
                 </form>

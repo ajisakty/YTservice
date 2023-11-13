@@ -45,3 +45,18 @@ function inputService($data, $id)
         return false;
     }
 }
+
+function serviceOrder($query)
+{
+    global $koneksi;
+    $result = mysqli_query($koneksi, $query);
+    $hasil = array();
+    if ($result) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            $hasil[] = $row;
+        }
+    } else {
+        echo "Kesalahan dalam menjalankan kueri SQL: " . mysqli_error($koneksi);
+    }
+    return $hasil;
+}
